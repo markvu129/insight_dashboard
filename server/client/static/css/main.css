@@ -1,0 +1,348 @@
+  
+
+@import url("https://openshift.redhat.com/app/stylesheets/overpass.css");
+body {
+    font-size: 11.5px;
+    background-color: #eeeeee;
+    padding: 0;
+    line-height: 1.5em;
+    color: #363a3f;
+    font-family: sans-serif;
+    margin: 0 auto;
+    position: relative;
+    background-size: 5px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        font-size: 12.305px;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    body {
+        font-size: 13.225px;
+    }
+}
+
+@media only screen and (min-width: 2600px) {
+    body {
+        font-size: 17.25px;
+    }
+}
+
+/*common stuffs*/
+.underline {
+    text-decoration: underline;
+}
+
+.inline {
+    display: inline
+}
+
+/*temporary media query for retina*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    body {
+        font-size: 14px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.menu-link {
+    display: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 95em;
+    position: relative;
+    padding: 0 1.5em;
+}
+
+#header .wrapper {
+    padding: 0;
+}
+
+.inset {
+    min-height: 8em 2em;
+    margin: 4em 0;
+    padding: 1.5em;
+    text-align: center;
+    color: #b5b9bf;
+    -moz-border-radius: 0.3333em;
+    -webkit-border-radius: 0.3333em;
+    border-radius: 0.3333em;
+    background-color: #f9fafa;
+}
+
+#header a, nav a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5em;
+    padding-top: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    min-height: 6em;
+    background-color: #373947;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QwZDNkNyIvPjxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSIjOWE5ZmE3Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjODk5MDk5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d0d3d7), color-stop(90%, #9a9fa7), color-stop(100%, #899099));
+    background: -moz-linear-gradient(top, #d0d3d7 0%, #9a9fa7 90%, #899099 100%);
+    background: -webkit-linear-gradient(top, #d0d3d7 0%, #9a9fa7 90%, #899099 100%);
+    background: linear-gradient(to bottom, #d0d3d7 0%, #9a9fa7 90%, #899099 100%);
+}
+
+#header {
+    background: #373947;
+    margin-bottom: 50px;
+}
+
+header a.username, header a.logout, header a.settings {
+    text-decoration: none;
+    color: #555a62;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.23);
+    float: right;
+    display: inline-block;
+    margin: 0 .5em;
+    padding: 0em 1.5em;
+    line-height: 2.5em;
+    height: 2.5em;
+    -moz-border-radius: 0.1333em;
+    -webkit-border-radius: 0.1333em;
+    border-radius: 0.1333em;
+}
+
+header a.username:hover, header a.logout:hover, header a.settings:hover {
+    color: #333;
+}
+
+header .username {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+
+header ::-webkit-input-placeholder {
+    color: #6d737e;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+    line-height: 1.5em;
+}
+
+header ::-moz-placeholder {
+    color: #6d737e;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0px 0px 0px 14px;
+    float: left;
+    display: inline-block;
+    color: white);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.21);
+    font-weight: 300;
+    font-size: 2em;
+    z-index: 3;
+    line-height: 1em;
+    text-indent: .75em;
+    font-family: Overpass, sans, sans-serif;
+}
+
+header h1 a {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+}
+
+header h1 abbr {
+    margin-left: 10px;
+    color: #00b1e2;
+    font-size: .5em;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.wiggle {
+    -webkit-animation: wiggle .2s ease-in infinite;
+    -moz-animation: wiggle .2s linear infinite;
+    -ms-animation: wiggle .2s linear infinite;
+    -o-animation: wiggle .2s linear infinite;
+    animation: wiggle .2s ease-in infinite;
+}
+
+@-ms-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -ms-transform: translate(0, -1em);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -o-transform: translate(0, -1em);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate(0, -1em);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -moz-transform: translate(0, -1em);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translate(0, -1em);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in-down, .fade-in-bottom {
+    -webkit-animation: fade-in-down .9s ease 0;
+    -moz-animation: fade-in-down .9s ease 0;
+    -ms-animation: fade-in-down .9s ease 0;
+    -o-animation: fade-in-down .9s ease 0;
+    animation: fade-in-down .9s ease 0;
+}
+
+.fade-out-up, .fade-out-up {
+    -webkit-animation: fade-out-up .2s ease 0;
+    -moz-animation: fade-out-up .2s ease 0;
+    -ms-animation: fade-out-up .2s ease 0;
+    -o-animation: fade-out-up .2s ease 0;
+    animation: fade-out-up .2s ease 0;
+}
+
+@media (max-width: 40em) {
+    #header h1 {
+        width: 100%;
+        clear: both;
+        margin-bottom: 1em;
+    }
+
+
+}
+
+header {
+    z-index: 2;
+    position: relative;
+}
+
+.footer {
+    /*no fixed footer*/
+    /*position: fixed; */
+    width: 100%;
+    background-color: #373947;
+    box-shadow: 0 -1px #d0d3d7, inset 0 1px white;
+    bottom: 0;
+    min-height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    margin: 0em;
+    border-radius: 0;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0.75em;
+    text-decoration: underline;
+}
+
+/** Classes **/
+.fifty-margin-card {
+    margin: 50px 50px 50px 100px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    padding: 50px 50px;
+}
+
+.table-container {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.list-no-bullet {
+    list-style-type: none;
+}
+
+.table-title {
+    background: #00b1e2;
+    border: transparent;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.lesson-row {
+    padding: 10px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1em;
+    position: relative;
+    top: 8px;
+    font-family: 'Lato', sans-serif;
+}
+
+.class-teachers {
+    margin-right: 10px;
+}
+
+.separate-left {
+    margin-left: 40px;
+}
+
+
+

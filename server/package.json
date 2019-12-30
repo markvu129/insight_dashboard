@@ -1,0 +1,29 @@
+{
+  "name": "fb_graph_api_scheduler",
+  "version": "1.0.0",
+  "description": "Fb graph api scheduler",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --use-strict index.js",
+    "bundle": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xMinh129/yimotion.git"
+  },
+  "author": "Minh Vu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.7.4",
+    "express": "^4.14.0",
+    "mongodb": "^3.4.1",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "validator": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "webpack": "^1.14.0"
+  }
+}

@@ -1,0 +1,72 @@
+.authentication-container{
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-right: 0 auto;
+    width: 50%;
+    padding: 50px 0px 50px 0px;
+    text-align: center;
+}
+
+.homepage-authentication{
+    margin: 0 auto;
+    width: 50%;
+    padding: 100px 0px 200px 0px;
+    text-align: center;
+}
+
+.homepage-authentication h1{
+    margin-bottom: 100px;
+}
+
+button.authentication {
+    position: relative;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    background: #00b1e2;
+    color: white;
+    padding: 18px 60px;
+    border-radius: 2px;
+    font-size: 22px;
+}
+
+button.authentication a{
+    color: white;
+    text-decoration: none;
+}
+
+button.authentication.right a{
+    color: #6d737e;
+}
+
+button.signup{
+    background: white;
+    color: #4e535a;
+}
+
+
+.ripple{
+    overflow:hidden;
+}
+
+.ripple-effect{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #00b1e2;
+    animation: ripple-animation 2s;
+}
+
+
+@keyframes ripple-animation {
+    from {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
