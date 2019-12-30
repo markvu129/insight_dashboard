@@ -76,7 +76,7 @@ class IgInsight extends Component {
               <div className="panel panel-filled">
                 <div className="panel-body">
                   <h2 className="m-b-none">
-                    140 <span className="slight"><i className="fa fa-play fa-rotate-90 c-white"> </i> 5%</span>
+                    34 <span className="slight"><i className="fa fa-play fa-rotate-90 c-white"> </i> 5%</span>
                   </h2>
 
                   <div className="small">Impressions</div>
@@ -92,7 +92,7 @@ class IgInsight extends Component {
               <div className="panel panel-filled">
                 <div className="panel-body">
                   <h2 className="m-b-none">
-                    262 <span className="slight"><i className="fa fa-play fa-rotate-270 text-warning"> </i> +56%</span>
+                    33 <span className="slight"><i className="fa fa-play fa-rotate-270 text-warning"> </i> -27%</span>
                   </h2>
 
                   <div className="small">Post interactions</div>

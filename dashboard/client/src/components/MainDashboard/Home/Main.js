@@ -24,15 +24,15 @@ class Main extends Component {
               <div className="panel panel-filled">
                 <div className="panel-body">
                   <h2 className="m-b-none">
-                    140 <span className="slight"><i className="fa fa-play fa-rotate-90 c-white"> </i> 5%</span>
+                    176 <span className="slight"><i className="fa fa-play fa-rotate-90 c-white"> </i> 5%</span>
                   </h2>
 
                   <div className="small">Daily impressions</div>
                   <div className="slight m-t-sm">
                     <div className="section-breakdown"><i className="fa fa-facebook-f"> </i> Facebook: <span
-                      className="c-white">510</span></div>
+                      className="c-white">140</span></div>
                     <div className="section-breakdown"><i className="fa fa-instagram"> </i> Instagram: <span
-                      className="c-white">512</span></div>
+                      className="c-white">36</span></div>
                     <div className="section-breakdown"><i className="fa fa-clock-o"> </i> Updated: <span
                       className="c-white">9:10am</span></div>
                   </div>
@@ -43,16 +43,16 @@ class Main extends Component {
               <div className="panel panel-filled">
                 <div className="panel-body">
                   <h2 className="m-b-none">
-                    262 <span className="slight"><i className="fa fa-play fa-rotate-270 text-warning"> </i> +56%</span>
+                    295 <span className="slight"><i className="fa fa-play fa-rotate-270 text-warning"> </i> +28%</span>
                   </h2>
 
                   <div className="small">Daily interactions</div>
 
                   <div className="slight m-t-sm">
                     <div className="section-breakdown"><i className="fa fa-thumbs-up"> </i> Likes: <span
-                      className="c-white">11</span></div>
+                      className="c-white">290</span></div>
                     <div className="section-breakdown"><i className="fa fa-comment"> </i> Comments: <span
-                      className="c-white">11</span></div>
+                      className="c-white">17</span></div>
                     <div className="section-breakdown"><i className="fa fa-clock-o"> </i> Updated: <span
                       className="c-white">05:42pm</span></div>
 
@@ -82,15 +82,15 @@ class Main extends Component {
                       <div className="row">
                         <div className="col-md-4">
                           <small className="stat-label">Today </small>
-                          <h4 className="m-t-xs">170,20 <i className="fa fa-level-up text-warning"></i></h4>
+                          <h4 className="m-t-xs">170 <i className="fa fa-level-up text-warning"></i></h4>
                         </div>
                         <div className="col-md-4">
                           <small className="stat-label">Last week </small>
-                          <h4 className="m-t-xs">20,20 <i className="fa fa-level-down c-white"></i></h4>
+                          <h4 className="m-t-xs">556 <i className="fa fa-level-down c-white"></i></h4>
                         </div>
                         <div className="col-md-4">
                           <small className="stat-label">Last month  </small>
-                          <h4 className="m-t-xs">2180,50 <i className="fa fa-level-up text-warning"></i></h4>
+                          <h4 className="m-t-xs">1391<i className="fa fa-level-up text-warning"></i></h4>
                         </div>
                       </div>
                     </div>

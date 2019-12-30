@@ -83,9 +83,9 @@ class FbInsight extends Component {
                   <div className="small">Impressions</div>
                   <div className="slight m-t-sm">
                     <div className="section-breakdown"><i className="fa fa-money"> </i> Paid: <span
-                      className="c-white">510</span></div>
+                      className="c-white">120</span></div>
                     <div className="section-breakdown"><i className="fa fa-users"> </i> Organic: <span
-                      className="c-white">512</span></div>
+                      className="c-white">20</span></div>
                     <div className="section-breakdown"><i className="fa fa-clock-o"> </i> Updated: <span
                       className="c-white">9:10am</span></div>
                   </div>
