@@ -1,12 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-    devtool: "source-map",
     // the entry file for the bundle
     entry: path.join(__dirname, '/client/src/index.js'),
 
@@ -102,6 +101,14 @@ module.exports = {
         new webpack.HashedModuleIdsPlugin(),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new CompressionPlugin({
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
         })
     ],
     // start Webpack in a watch mode, so Webpack will rebuild the bundle on changes

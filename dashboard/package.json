@@ -73,7 +73,7 @@
   "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
   "devDependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "compression-webpack-plugin": "^3.0.1",
+    "compression-webpack-plugin": "^1.1.12",
     "critters-webpack-plugin": "^2.4.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "preload-webpack-plugin": "^2.3.0",
