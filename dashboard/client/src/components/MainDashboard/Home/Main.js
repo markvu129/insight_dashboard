@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import TrafficChart from "../Home/TrafficChart.js";
 import InteractionChart from "../Home/InteractionChart.js";
 import DailyView from "../Home/DailyImpression";
+import { Lazy } from 'react-lazy'
 
 class Main extends Component {
   constructor(props) {
@@ -76,7 +77,9 @@ class Main extends Component {
                       </div>
 
                       <div className="sparkline3">
-                        <TrafficChart/>
+                        <Lazy>
+                          <TrafficChart/>
+                        </Lazy>
                       </div>
 
                       <div className="row">
@@ -102,7 +105,9 @@ class Main extends Component {
 
                       <div className="flot-chart">
                         <div className="flot-chart-content" id="flot-line-chart">
-                          <InteractionChart/>
+                          <Lazy>
+                            <InteractionChart/>
+                          </Lazy>
                         </div>
                       </div>
 

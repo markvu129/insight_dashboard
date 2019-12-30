@@ -33,7 +33,7 @@ class InteractionChart extends Component {
       .catch(err => console.log(err))
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.fetchData();
   }
 

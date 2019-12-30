@@ -1,6 +1,7 @@
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     // the entry file for the bundle
@@ -62,7 +63,8 @@ module.exports = {
             'process.env':{
                 'NODE_ENV': JSON.stringify('production')
             }
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ],
     // start Webpack in a watch mode, so Webpack will rebuild the bundle on changes
     watch: true

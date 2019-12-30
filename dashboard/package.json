@@ -73,6 +73,9 @@
   "homepage": "",
   "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
   "devDependencies": {
-    "critters-webpack-plugin": "^2.4.0"
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "critters-webpack-plugin": "^2.4.0",
+    "react-lazy": "^1.1.0",
+    "webpack-bundle-analyzer": "^3.6.0"
   }
 }
