@@ -1,9 +1,12 @@
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
+    devtool: "source-map",
     // the entry file for the bundle
     entry: path.join(__dirname, '/client/src/index.js'),
 
@@ -56,15 +59,50 @@ module.exports = {
         historyApiFallback: true
     },
     plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                screw_ie8: true,
+                conditionals: true,
+                unused: true,
+                comparisons: true,
+                sequences: true,
+                dead_code: true,
+                evaluate: true,
+                if_return: true,
+                join_vars: true
+            },
+            output: {
+                comments: false
+            }
+        }),
         new HtmlWebpackPlugin({
-            template: './client/static/index.html'
+            template: './client/static/index.html',
+            minify: {
+                collapseWhitespace: true,
+                collapseInlineTagWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true
+            }
         }),
         new webpack.DefinePlugin({
             'process.env':{
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
-        new BundleAnalyzerPlugin()
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        }),
+        new PreloadWebpackPlugin({
+            rel: 'preload',
+            as: 'script',
+            include: 'allChunks',
+            fileBlacklist: [/\.(css|map)$/, /base?.+/]
+        }),
+        new webpack.HashedModuleIdsPlugin(),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        })
     ],
     // start Webpack in a watch mode, so Webpack will rebuild the bundle on changes
     watch: true
